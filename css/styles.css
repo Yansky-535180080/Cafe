@@ -1,0 +1,84 @@
+.parallax {
+    height: 700px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+#background-1 {
+    background-image: url("../assets/images/parallax_bg_1.jpg");
+}
+
+#background-2 {
+    background-image: url("../assets/images/parallax_bg_2.jpg");
+}
+
+  .navbar {
+      background-color: black;
+      height: 70px;
+  }
+
+  .content-box {
+      background-color: black;
+      background-size: cover;
+      height: 1000px;
+      padding-top: 10px;
+      position: relative;
+  }
+
+  #box-1 {
+    background-image: url(../assets/images/bg1.jpg);
+  }
+
+  #box-2 {
+    background-image: url(../assets/images/bg3.jpg);
+  }
+
+body { padding-top: 70px; }
+
+.parallax > .text-body {
+    justify-content: center;
+    position: absolute;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15%;
+}
+
+.text-body > h1, p {
+    color: white;
+}
+
+h1 {
+    text-align: justify;
+    font-size: 45pt;
+}
+
+p {
+    text-align: center;
+}
+
+.content-box > .text-body {;
+    color: white;
+    justify-content: center;
+    position: absolute;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 25%;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    justify-content: center;
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 15px;
+}

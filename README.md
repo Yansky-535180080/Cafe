@@ -1,2 +1,2 @@
 # Cafe
-Proejct UTS/UAS Web Programming
+Project UTS/UAS Web Programming
