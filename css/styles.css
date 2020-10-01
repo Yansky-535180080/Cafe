@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .parallax {
     height: 700px;
   
@@ -8,16 +12,17 @@
     background-size: cover;
   }
 
-
   body {
     font-family: 'Segoe UI';
   }
 
 #background-1 {
+    height: 1000px;
     background-image: url("../assets/images/parallax_bg_1.jpg");
 }
 
-#background-2 {
+#about {
+    height: 1000px;
     background-image: url("../assets/images/parallax_bg_2.jpg");
 }
 
@@ -44,7 +49,7 @@
 
 body { padding-top: 70px; }
 
-.parallax > .text-body {
+.parallax .text-body {
     justify-content: center;
     position: absolute;
     margin-left: 25%;
@@ -52,20 +57,16 @@ body { padding-top: 70px; }
     margin-top: 15%;
 }
 
-.text-body > h1, p {
+h1, p {
+    text-align: center;
     color: white;
 }
 
 h1 {
-    text-align: justify;
     font-size: 45pt;
 }
 
-p {
-    text-align: center;
-}
-
-.content-box > .text-body {
+.content-box .text-body {
     color: white;
     justify-content: center;
     position: absolute;

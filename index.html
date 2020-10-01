@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -22,7 +23,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    <script src="javascript/home.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="javascripts/main.js"></script>
 </head>
 
 <body>
@@ -44,11 +46,10 @@
                         <a class="nav-link" href="#">Menu</a>
                     </li>
                     <li class="nav-item ml-2 mr-2">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                 </ul>
             </div>
-        </div>
         </div>
     </nav>
     <div class="parallax" id="background-1">
@@ -58,24 +59,23 @@
                 your personal tastes.
             </p>
         </div>
-
     </div>
     <div class="content-box" id="box-1">
-        <div class="text-body">
+        <div class="text-body" data-aos="fade-in" data-aos-duration="1250">
             <h1>Your concern matters.</h1>
             <p>Everything in your mind is our priority.</p>
         </div>
     </div>
 
-    <div class="parallax" id="background-2">
-        <div class="text-body">
+    <div class="parallax" id="about">
+        <div class="text-body" data-aos="fade-in" data-aos-duration="1250">
             <h1>It is a masterpiece.</h1>
             <p>From a professional delivered to you at its best.</p>
         </div>
     </div>
 
     <div class="content-box" id="box-2">
-        <div class="text-body">
+        <div class="text-body" data-aos="fade-in" data-aos-duration="1250">
             <h1>Your concern matters.</h1>
             <p>Everything in your mind is our priority.</p>
         </div>
@@ -84,6 +84,10 @@
     <footer>
         <p>&copy;2020 Kelompok All rights reserved.</p>
     </footer>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
