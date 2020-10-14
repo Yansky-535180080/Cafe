@@ -16,6 +16,33 @@ html {
     font-family: 'Segoe UI';
   }
 
+  button {
+    font: inherit;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background-color: white;
+    margin-left: 40%;
+    margin-right: auto;
+  }
+  
+  button:focus {
+    outline: 0;
+  }
+
+  .ripple {
+    background-position: center;
+    transition: background 1s;
+  }
+  .ripple:hover {
+    background:whitesmoke radial-gradient(circle, transparent 1%, whitesmoke 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: lightblue;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
 #background-1 {
     height: 1000px;
     background-image: url("../assets/images/parallax_bg_1.jpg");
@@ -82,4 +109,8 @@ footer {
     display: flex;
     padding-top: 35px;
     padding-bottom: 15px;
+}
+
+iframe {
+    opacity: 90%;
 }
