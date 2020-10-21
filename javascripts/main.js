@@ -7,3 +7,10 @@ function showHome() {
     $('#content-1').css('display', 'block');
     $('#content-2').css('display', 'none');
 }
+
+function showAbout() {
+    if ($('#content-1').css('display') == 'none') {
+        showHome();
+    }
+    scrollTo(0, 2000);
+}

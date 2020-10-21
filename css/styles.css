@@ -34,9 +34,11 @@ html {
     background-position: center;
     transition: background 1s;
   }
+
   .ripple:hover {
     background:whitesmoke radial-gradient(circle, transparent 1%, whitesmoke 1%) center/15000%;
   }
+
   .ripple:active {
     background-color: lightblue;
     background-size: 100%;
@@ -53,9 +55,14 @@ html {
     background-image: url("../assets/images/coffee-918926_1920.jpg");
 }
 
-#about {
+#carousel-item-3 {
+  height: 700px;
+  background-image: url("../assets/images/coffee-984328_1920.jpg");
+}
+
+#box-3 {
     height: 1000px;
-    background-image: url("../assets/images/parallax_bg_2.jpg");
+    background-image: url("../assets/images/cafe.jpg");
 }
 
   .navbar {
@@ -71,13 +78,28 @@ html {
       position: relative;
   }
 
-  #box-1 {
-    /*background-image: url(../assets/images/bg1.jpg);*/
+  .content-box-1 {
     background-color: black;
+    background-size: cover;
+    height: 1000px;
+    position: relative;
+}
+
+  .borderline {
+    background-color: black;
+    background-size: cover;
+    height: 10px;
+    padding-top: 10px;
+    position: relative;
+}
+
+  #about {
+    background-image: url(../assets/images/coffee-3392168_1920.jpg);
+    /* background-color: black; */
   }
 
   #box-2 {
-    background-image: url(../assets/images/bg3.jpg);
+    background-image: url(../assets/images/coffee-2589761_1920.jpg);
   }
 
 body { padding-top: 70px; }
