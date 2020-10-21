@@ -43,9 +43,14 @@ html {
     transition: background 0s;
   }
 
-#background-1 {
-    height: 1000px;
-    background-image: url("../assets/images/parallax_bg_1.jpg");
+#carousel-item-1 {
+    height: 700px;
+    background-image: url("../assets/images/cafe.jpg");
+}
+
+#carousel-item-2 {
+    height: 700px;
+    background-image: url("../assets/images/coffee-918926_1920.jpg");
 }
 
 #about {
@@ -67,7 +72,8 @@ html {
   }
 
   #box-1 {
-    background-image: url(../assets/images/bg1.jpg);
+    /*background-image: url(../assets/images/bg1.jpg);*/
+    background-color: black;
   }
 
   #box-2 {
@@ -113,4 +119,15 @@ footer {
 
 iframe {
     opacity: 90%;
+    max-width: 100%;
+}
+
+.nav-link {
+    text-align: center;
+    color: white;
+    font-size: large;
+}
+
+a:active, a:hover {
+    color: whitesmoke;
 }
