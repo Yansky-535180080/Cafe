@@ -12,5 +12,4 @@ function showAbout() {
     if ($('#content-1').css('display') == 'none') {
         showHome();
     }
-    scrollTo(0, 2000);
 }
