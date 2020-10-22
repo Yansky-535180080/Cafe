@@ -151,6 +151,10 @@ h1 {
   margin-top: 25%;
 }
 
+.content-box-1 iframe {
+  margin-left: 30%;
+}
+
 footer {
   background-color: black;
   color: white;
@@ -238,19 +242,3 @@ label {
 #box-food-2 {
   background-image: url(../assets/images/coffee-984328_1920.jpg);
 }
-
-@media (max-width: 575.98px) {  }
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
