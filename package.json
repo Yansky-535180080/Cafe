@@ -1,0 +1,22 @@
+{
+  "name": "caffecafe",
+  "version": "1.0.0",
+  "description": "CaffeCafe Website Project for Web Programming Class.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yansky-535180080/Cafe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yansky-535180080/Cafe/issues"
+  },
+  "homepage": "https://github.com/Yansky-535180080/Cafe#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
