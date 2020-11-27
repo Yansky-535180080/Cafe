@@ -1,26 +1,36 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const layouts = require('express-ejs-layouts');
 
 const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-app.get('/', function(req, res) {
-    res.send('HelloWorld!');
-});
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
-app.post('/', function(req, res) {
-    res.send('Ini POST Request!');
-});
+// body-parser to parse request body
+// app.use(bodyParser.urlencoded());
 
-app.put('/user', function(req, res) {
-    res.send('PUT Request dijalankan!;')
-});
-
-app.delete('/user', function(req, res) {
-    res.send('DELETE Request pada suatu user!');
-});
-
+// static files
 app.use(express.static('public'));
+
+// enabling session
+// app.use(session({
+//     secret: 'some_secret_key', 
+//     cookie: {}
+// }));
+
+// use layouts
+// app.use(layouts);
+
+// app.set('layout', 'layouts/main.ejs');
+
+// routes
+const index = require('./routes/index');
+
+app.use('/', index);
 
 app.listen(PORT, () => {
     console.log(`Server running at port ${PORT}`);
