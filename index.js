@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+
 const layouts = require('express-ejs-layouts');
 
 const PORT = process.env.PORT || 3000;
@@ -23,9 +24,8 @@ app.use(express.static('public'));
 // }));
 
 // use layouts
-// app.use(layouts);
-
-// app.set('layout', 'layouts/main.ejs');
+app.use(layouts);
+app.set('layout', 'layouts/main.ejs');
 
 // routes
 const index = require('./routes/index');

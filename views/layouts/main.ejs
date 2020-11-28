@@ -27,33 +27,36 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    <%- head-script -%>
+    <%- headScript %>
 </head>
 
 <body>
+    <%- body %>
 
     <!-- Nav-bar here -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controller="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="CaffeCafe" height="64">
+            </a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/todo">To-Do List</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/auth/logout">Logout</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active ml-2 mr-2">
+                        <a class="nav-link" href="#" onclick="showHome()">Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ml-2 mr-2">
+                        <a class="nav-link" href="#" onclick="showMenu()">Menu</a>
+                    </li>
+                    <li class="nav-item ml-2 mr-2">
+                        <a class="nav-link" href="#about" onclick="showAbout()">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -100,7 +103,7 @@
     </footer>
 
     <!-- Body Scripts -->
-    <%- body-script %>
+    <%- bodyScript %>
 </body>
 
 </html>
