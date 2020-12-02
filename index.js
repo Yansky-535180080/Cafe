@@ -12,7 +12,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // body-parser to parse request body
-// app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded());
 
 // static files
 app.use(express.static('public'));
@@ -29,8 +29,11 @@ app.set('layout', 'layouts/main.ejs');
 
 // routes
 const index = require('./routes/index');
+const user = require('./routes/user');
 
 app.use('/', index);
+app.use('/user', user);
+
 
 app.listen(PORT, () => {
     console.log(`Server running at port ${PORT}`);
