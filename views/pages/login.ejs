@@ -1,39 +1,41 @@
 <%- contentFor('title') %>
-CaffeeCafe - Login
+    CaffeeCafe - Login
 
-<%- contentFor('style') %>
+    <%- contentFor('style') %>
 
-<%- contentFor('headScript') %>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/javascripts/main.js"></script>
+        <%- contentFor('headScript') %>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="/javascripts/main.js"></script>
 
-<%- contentFor('body') %>
-<div class="parallax menu-container">
-    <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
-        <h1 data-aos="fade-in" data-aos-duration="1250">Login</h1>
-        <br>
-        <div class="container-md mt-3">
-            <form action="/user/login" method="POST">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="Enter email">
+            <%- contentFor('body') %>
+                <div class="parallax menu-container">
+                    <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
+                        <h1 data-aos="fade-in" data-aos-duration="1250">Login</h1>
+                        <br>
+                        <div class="container-md mt-3">
+                            <form action="/user/login" method="POST">
+                                <div class="form-group" style="padding-left: 20%; padding-right: 20%;">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" class="form-control" placeholder="Enter email" ;">
+                                </div>
+                                <div class="form-group" style="padding-left: 20%; padding-right: 20%;">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" class="form-control"
+                                        placeholder="Enter password">
+                                </div>
+                                <h5>New member? Click <a href="">here</a> to join us.</h5>
+                                <button class="btn btn-primary" type="submit" style="margin-bottom: 5%; margin-left: 20%;">Login</button>
+                            </form>
+                        </div>
+                        <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
+
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" class="form-control" placeholder="Enter password">
-                </div>
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </form>
-        </div>
-        <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
-
-        </div>
-    </div>
-</div>
 
 
-<%- contentFor('bodyScript') %>
+                <%- contentFor('bodyScript') %>
 
-<script>
-    AOS.init();
-</script>
+                    <script>
+                        AOS.init();
+                    </script>
