@@ -2,6 +2,7 @@ function showMenu() {
     $('#content-1').css('display', 'none');
     $('#content-2').css('display', 'block');
     AOS.init()
+    location.href = 'menu';
 };
 
 function showHome() {

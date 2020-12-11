@@ -1,112 +1,117 @@
 <%- contentFor('title') %>
-CaffeeCafe - Welcome
+    CaffeeCafe - Welcome
 
-<%- contentFor('style') %>
+    <%- contentFor('style') %>
 
-<%- contentFor('headScript') %>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="javascripts/main.js"></script>
+        <%- contentFor('headScript') %>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="javascripts/main.js"></script>
 
-<%- contentFor('body') %>
+            <%- contentFor('body') %>
 
-<div id="content-1" style="display: block;">
+                <div id="content-1" style="display: block;">
 
-    <div id="carouselControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="parallax" id="carousel-item-1">
-                    <div class="text-body">
-                        <h1>It's about your taste.</h1>
-                        <p>Everything created for you, only for you based on
-                            your personal tastes.
-                        </p>
-                        <button class="ripple" type="button" href="/menu" onclick="showMenu()">Read More</button>
+                    <div id="carouselControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="parallax" id="carousel-item-1">
+                                    <div class="text-body">
+                                        <h1>It's about your taste.</h1>
+                                        <p>Everything created for you, only for you based on
+                                            your personal tastes.
+                                        </p>
+                                        <button class="ripple" type="button" onclick="showMenu()">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="parallax" id="carousel-item-2">
+                                    <div class="text-body">
+                                        <h1>Fresh coffee everyday.</h1>
+                                        <p>Start your day with our fresh-blended coffee.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="parallax" id="carousel-item-3">
+                                    <div class="text-body">
+                                        <h1>Enjoy the masterpiece</h1>
+                                        <p>Delivered from our only professionals just for you.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                    <div class="content-box-1" id="about">
+                        <div class="text-body" data-aos="fade-in" data-aos-duration="1250">
+                            <div class="container">
+                                <h1 style="padding-top: 10%;">About us</h1>
+                                <div class="row" style="padding-top: 5%;">
+                                    <div class="col-6">
+                                        <img src="assets/images/mike-marquez-VnlyIQxQS10-unsplash.jpg" height="700"
+                                            alt="Coffee">
+                                    </div>
+                                    <div class="col-5" style="padding-top: 25%; background-color: rgba(0, 0, 0, 0.5);">
+                                        <p style="font-size: large;">We have been serving you since 1978 and still
+                                            countings.
+                                            Professionality is not just about
+                                            job, its a matter of principle. We always deliver what you called
+                                            masterpice.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-box-1" id="box-3">
+                        <div class="text-body" data-aos="fade-in" data-aos-duration="1250">
+                            <div class="container">
+                                <div class="row" style="padding-top: 15%;">
+                                    <div class="col-5" style="padding-top: 25%; background-color: rgba(0, 0, 0, 0.5);">
+                                        <p style="font-size: large;">Coffee is not a drink. It's our form of joy, art of
+                                            happiness,
+                                            and our philosophy.</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="assets/images/pexels-chevanon-photography-302896.jpg" height="700"
+                                            alt="Coffee">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-box-1" id="box-2">
+                        <div class="container">
+                            <div class="text-body" data-aos="fade-in" data-aos-duration="1250">
+                                <h1>Find us</h1>
+                                <p>Visit us and let us serve you out of the best.</p>
+                                <div>
+
+                                </div>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.8386788605571!2d106.78886366936638!3d-6.169648883009896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f65c8572640d%3A0xc0a066d78372614e!2sTarumanagara%20University%20Campus%201!5e0!3m2!1sen!2sid!4v1602690285147!5m2!1sen!2sid"
+                                    width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="true"
+                                    aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="carousel-item">
-                <div class="parallax" id="carousel-item-2">
-                    <div class="text-body">
-                        <h1>Fresh coffee everyday.</h1>
-                        <p>Start your day with our fresh-blended coffee.
-                        </p>
-                    </div>
-                </div>
-            </div>
+                <%- contentFor('bodyScript') %>
 
-            <div class="carousel-item">
-                <div class="parallax" id="carousel-item-3">
-                    <div class="text-body">
-                        <h1>Enjoy the masterpiece</h1>
-                        <p>Delivered from our only professionals just for you.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-
-    <div class="content-box-1" id="about">
-        <div class="text-body" data-aos="fade-in" data-aos-duration="1250">
-            <div class="container">
-                <h1 style="padding-top: 10%;">About us</h1>
-                <div class="row" style="padding-top: 5%;">
-                    <div class="col-6">
-                        <img src="assets/images/mike-marquez-VnlyIQxQS10-unsplash.jpg" height="700" alt="Coffee">
-                    </div>
-                    <div class="col-5" style="padding-top: 25%; background-color: rgba(0, 0, 0, 0.5);">
-                        <p style="font-size: large;">We have been serving you since 1978 and still countings.
-                            Professionality is not just about
-                            job, its a matter of principle. We always deliver what you called masterpice.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="content-box-1" id="box-3">
-        <div class="text-body" data-aos="fade-in" data-aos-duration="1250">
-            <div class="container">
-                <div class="row" style="padding-top: 15%;">
-                    <div class="col-5" style="padding-top: 25%; background-color: rgba(0, 0, 0, 0.5);">
-                        <p style="font-size: large;">Coffee is not a drink. It's our form of joy, art of happiness,
-                            and our philosophy.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="assets/images/pexels-chevanon-photography-302896.jpg" height="700" alt="Coffee">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="content-box-1" id="box-2">
-        <div class="container">
-            <div class="text-body" data-aos="fade-in" data-aos-duration="1250">
-                <h1>Find us</h1>
-                <p>Visit us and let us serve you out of the best.</p>
-                <div>
-
-                </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.8386788605571!2d106.78886366936638!3d-6.169648883009896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f65c8572640d%3A0xc0a066d78372614e!2sTarumanagara%20University%20Campus%201!5e0!3m2!1sen!2sid!4v1602690285147!5m2!1sen!2sid"
-                    width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="true"
-                    aria-hidden="false" tabindex="0"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
-
-<%- contentFor('bodyScript') %>
-
-<script>
-    AOS.init();
-</script>
+                    <script>
+                        AOS.init();
+                    </script>
