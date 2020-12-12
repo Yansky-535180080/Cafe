@@ -29,7 +29,7 @@ router.post('/register', async (req, res, next) => {
     name = req.body.name;
     email = req.body.email;
     password = req.body.password;
-    retype = req.body.re - password;
+    retype = req.body.retype;
 
     let errors = [];
 
