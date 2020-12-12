@@ -59,10 +59,17 @@
                 </ul>
             </div>
             <ul class="navbar-nav">
+                <% if (!user) { %>
                 <li class="nav-item ml-4 mr-4">
                     <button data-toggle="popover" title="Welcome, a member?"
                         data-content="Are you a member? Click here to login." data-trigger="manual" onclick="window.location.href='/user/login'">Login</button>
                 </li>
+                <% } %>
+                <% if (user){ %>
+                <li class="nav-item ml-4 mr-4">
+                    <h5 style="margin-top: 5px;">Hi, <%= user.name %></h5>
+                </li>
+                <% } %>
             </ul>
         </div>
     </nav>
