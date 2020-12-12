@@ -1,6 +1,7 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const session = require('express-session');
+const passport = require("passport");
+const flash = require('connect-flash');
 
 const layouts = require('express-ejs-layouts');
 
@@ -8,20 +9,43 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-// set the view engine to ejs
+// Set the view engine to ejs
 app.set('view engine', 'ejs');
 
-// body-parser to parse request body
-app.use(bodyParser.urlencoded());
+// Use body-parser to parse request body
+app.use(express.urlencoded({ extended: false }));
 
-// static files
+// Static files
 app.use(express.static('public'));
 
-// enabling session
-// app.use(session({
-//     secret: 'some_secret_key', 
-//     cookie: {}
-// }));
+// Config passportjs
+require("./config/passport")(passport);
+
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Config db
+const db = require('./config/database');
+
+// Enabling session
+app.use(session({
+    secret: 'some_secret_key', 
+    cookie: {}, 
+    resave: true,
+    saveUninitialized: true
+ }));
+
+//connect flash
+app.use(flash());
+
+// Flash global var
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash("success_msg");
+  res.locals.error_msg = req.flash("error_msg");
+  res.locals.error = req.flash("error");
+  next();
+});
 
 // use layouts
 app.use(layouts);
