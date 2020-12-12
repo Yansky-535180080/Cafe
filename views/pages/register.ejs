@@ -10,15 +10,16 @@
             <%- contentFor('body') %>
                 <div class="parallax menu-container">
                     <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
-                        <h1 data-aos="fade-in" data-aos-duration="1250">Register</h1>
+                        <h1 data-aos="fade-in" data-aos-duration="1250"
+                            style="padding-top: 40px; padding-bottom: 35px;">Register</h1>
                         <br>
                         <%- include ("../partials/messages"); %>
                             <div class="container-md mt-3">
                                 <form action="/user/register" method="POST">
                                     <div class="form-group" style="padding-left: 20%; padding-right: 20%;">
                                         <label for="name">Name</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Enter your name"
-                                            required>
+                                        <input type="text" name="name" class="form-control"
+                                            placeholder="Enter your name" required>
                                     </div>
                                     <div class="form-group" style="padding-left: 20%; padding-right: 20%;">
                                         <label for="email">Email</label>
@@ -27,13 +28,13 @@
                                     </div>
                                     <div class="form-group" style="padding-left: 20%; padding-right: 20%;">
                                         <label for="password">Password</label>
-                                        <input type="password" name="password" class="form-control" placeholder="Your password here"
-                                            placeholder="Enter password" required>
+                                        <input type="password" name="password" class="form-control"
+                                            placeholder="Your password here" placeholder="Enter password" required>
                                     </div>
                                     <div class="form-group" style="padding-left: 20%; padding-right: 20%;">
                                         <label for="re-password">Retype password</label>
-                                        <input type="password" name="re-password" class="form-control" placeholder="Confirm your password"
-                                            placeholder="Enter password" required>
+                                        <input type="password" name="re-password" class="form-control"
+                                            placeholder="Confirm your password" placeholder="Enter password" required>
                                     </div>
                                     <h5>Already a member? Click <a href="/user/login">here</a> to login.</h5>
                                     <button class="btn btn-primary btn-success" type="submit"
