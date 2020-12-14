@@ -5,7 +5,9 @@ const Menu = require('../models/menu');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    res.render('pages/index');
+    res.render('pages/index', {
+        user : req.user
+    });
 });
 
 router.get('/menu', async (req, res) => {
@@ -14,8 +16,7 @@ router.get('/menu', async (req, res) => {
             throw error;
         }
         else {
-            res.render('pages/menu', {menus: data});
-            console.log(JSON.stringify(data));
+            res.render('pages/menu', {menus: data, user: req.user});
         }
     });
 });

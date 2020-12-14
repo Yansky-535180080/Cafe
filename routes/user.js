@@ -10,11 +10,21 @@ const Member = require('../models/member');
 const { deserializeUser } = require('passport');
 
 router.get('/login', (req, res) => {
-    res.render('pages/login');
+    res.render('pages/login', {
+        user: req.user
+    });
 });
 
 router.get('/register', (req, res) => {
-    res.render('pages/register');
+    res.render('pages/register', {
+        user: req.user
+    });
+})
+
+router.get('/profile', (req, res) => {
+    res.render('pages/profile', {
+        user: req.user
+    });
 })
 
 router.post('/login', (req, res, next) => {

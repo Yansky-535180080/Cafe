@@ -5,6 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%- headMeta %>
+    <!-- Meta tags here-->
 
     <title>
         <%- title %>
@@ -61,17 +63,30 @@
                     </ul>
                 </div>
                 <ul class="navbar-nav">
+                    <% if (!user) { %>
                     <li class="nav-item ml-4 mr-4">
                         <button data-toggle="popover" title="Welcome, a member?"
                             data-content="Are you a member? Click here to login." data-trigger="manual"
                             onclick="window.location.href='/user/login'">Login</button>
                     </li>
-                    <li class="nav-item ml-4 mr-4">
-                        <button onclick="window.location.href='/user/logout'">Logout</button>
+                    <% } %>
+                    
+                    <% if (user) { %>
+                    <li class="nav-item ml-4">
+                        <h5 style="margin-top: 5px;">Hi, <%= user.name %></h5>
                     </li>
-                    <li class="nav-item ml-4 mr-4">
-                        <h5 style="margin-top: 5px;">Hi, </h5>
-                    </li>
+                    <div class="btn-group">
+                        <button type="button" class="btn button-account btn-sm dropdown-toggle ml-4 mr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          My Account
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                         <!-- <a class="dropdown-item" href="/user/profile">Profile</a>-->
+                          <!--<a class="dropdown-item" href="#">Account settings</a>-->
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="/user/logout">Logout</a>
+                        </div>
+                      </div>
+                    <% } %>
                 </ul>
             </div>
         </nav>

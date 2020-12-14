@@ -1,96 +1,32 @@
-<%- contentFor('title') %>
-    CaffeeCafe - Menu
+<%- contentFor('headMeta') %>
 
-    <%- contentFor('style') %>
+    <%- contentFor('title') %>
+        CaffeeCafe - Menu
 
-        <%- contentFor('headScript') %>
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            <script src="javascripts/main.js"></script>
+        <%- contentFor('style') %>
 
-            <%- contentFor('body') %>
+            <%- contentFor('headScript') %>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script src="javascripts/main.js"></script>
 
-                <div id="content-2" style="display: block;">
+                <%- contentFor('body') %>
 
-                    <div class="header-box">
-                        <div class="text-body" style="background-color: rgba(0, 0, 0, 0.5); padding: 15px;">
-                            <h1>Our Menu here</h1>
-                        </div>
-                    </div>
+                    <div id="content-2" style="display: block;">
 
-                    <div class="parallax menu-container">
-                        <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
-                            <h1 data-aos="fade-in" data-aos-duration="1250">Hot Coffee</h1>
-                            <br>
-                            <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
-
-                                <% menus.forEach((menu)=> { %>
-                                    <% if (menu.category === 'Hot Coffee' ) {%>
-                                        <div class="col-lg-3 col-md-6 mb-4">
-                                            <div class="card">
-                                                <img class="card-img-top" src="<%= menu.img %>" alt="<%= menu.menu %>">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">
-                                                        <%= menu.menu %>
-                                                    </h4>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <p style="color: white;">
-                                                        <% menu.price %>
-                                                    </p>
-                                                    <a href="#<%= menu.menu.split(' ').join('_') %>"
-                                                        class="btn btn-primary" data-toggle="modal"
-                                                        data-target="#<%= menu.menu.split(' ').join('_') %>">Know me
-                                                        better</a>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="modal fade" data-backdrop="false"
-                                            id="<%= menu.menu.split(' ').join('_') %>" tabindex="0" role="dialog"
-                                            aria-labelledby="ModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content" style="background-color: black;">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="ModalLabel">
-                                                            <%= menu.menu %>
-                                                        </h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true"
-                                                                style="color: white;">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>
-                                                            <%= menu.description %>
-                                                        </p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <p>Rp.<%= menu.price %>,-</p>
-                                                        <!--<button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Close</button>-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <% } %>
-                                            <% }) %>
+                        <div class="header-box">
+                            <div class="text-body" style="background-color: rgba(0, 0, 0, 0.5); padding: 15px;">
+                                <h1>Our Menu here</h1>
                             </div>
                         </div>
 
-
-                        <div class="menu-content-box" id="box-food-1">
+                        <div class="parallax menu-container">
                             <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
-                                <h1 data-aos="fade-in" data-aos-duration="1250">Iced Coffee</h1>
+                                <h1 data-aos="fade-in" data-aos-duration="1250">Hot Coffee</h1>
                                 <br>
                                 <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
 
-
                                     <% menus.forEach((menu)=> { %>
-                                        <% if (menu.category === 'Iced Coffee' ) {%>
+                                        <% if (menu.category==='Hot Coffee' ) {%>
                                             <div class="col-lg-3 col-md-6 mb-4">
                                                 <div class="card">
                                                     <img class="card-img-top" src="<%= menu.img %>"
@@ -106,9 +42,9 @@
                                                         </p>
                                                         <a href="#<%= menu.menu.split(' ').join('_') %>"
                                                             class="btn btn-primary" data-toggle="modal"
-                                                            data-target="#<%= menu.menu.split(' ').join('_') %>">Know me
+                                                            data-target="#<%= menu.menu.split(' ').join('_') %>">Know
+                                                            me
                                                             better</a>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -118,7 +54,7 @@
                                                 id="<%= menu.menu.split(' ').join('_') %>" tabindex="0" role="dialog"
                                                 aria-labelledby="ModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
-                                                    <div class="modal-content" style="background-color: black;">
+                                                    <div class="modal-content">
                                                         <div class="modal-header">
                                                             <h5 class="modal-title" id="ModalLabel">
                                                                 <%= menu.menu %>
@@ -145,211 +81,283 @@
 
                                             <% } %>
                                                 <% }) %>
-
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="parallax menu-container">
-                            <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
-                                <h1 data-aos="fade-in" data-aos-duration="1250">Non-Coffee</h1>
-                                <br>
-                                <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
-
-                                    <% menus.forEach((menu)=> { %>
-                                        <% if (menu.category === 'Non-Coffee' ) {%>
-                                            <div class="col-lg-3 col-md-6 mb-4">
-                                                <div class="card">
-                                                    <img class="card-img-top" src="<%= menu.img %>"
-                                                        alt="<%= menu.menu %>">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">
-                                                            <%= menu.menu %>
-                                                        </h4>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p style="color: white;">
-                                                            <% menu.price %>
-                                                        </p>
-                                                        <a href="#<%= menu.menu.split(' ').join('_') %>"
-                                                            class="btn btn-primary" data-toggle="modal"
-                                                            data-target="#<%= menu.menu.split(' ').join('_') %>">Know me
-                                                            better</a>
-
-                                                    </div>
-                                                </div>
-                                            </div>
 
 
-                                            <div class="modal fade" data-backdrop="false"
-                                                id="<%= menu.menu.split(' ').join('_') %>" tabindex="0" role="dialog"
-                                                aria-labelledby="ModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content" style="background-color: black;">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="ModalLabel">
+                            <div class="menu-content-box" id="box-food-1">
+                                <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <h1 data-aos="fade-in" data-aos-duration="1250">Iced Coffee</h1>
+                                    <br>
+                                    <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
+
+
+                                        <% menus.forEach((menu)=> { %>
+                                            <% if (menu.category==='Iced Coffee' ) {%>
+                                                <div class="col-lg-3 col-md-6 mb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="<%= menu.img %>"
+                                                            alt="<%= menu.menu %>">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title">
                                                                 <%= menu.menu %>
-                                                            </h5>
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Close">
-                                                                <span aria-hidden="true"
-                                                                    style="color: white;">&times;</span>
-                                                            </button>
+                                                            </h4>
                                                         </div>
-                                                        <div class="modal-body">
-                                                            <p>
-                                                                <%= menu.description %>
+                                                        <div class="card-footer">
+                                                            <p style="color: white;">
+                                                                <% menu.price %>
                                                             </p>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <p>Rp.<%= menu.price %>,-</p>
-                                                            <!--<button type="button" class="btn btn-secondary"
-                                                                data-dismiss="modal">Close</button>-->
+                                                            <a href="#<%= menu.menu.split(' ').join('_') %>"
+                                                                class="btn btn-primary" data-toggle="modal"
+                                                                data-target="#<%= menu.menu.split(' ').join('_') %>">Know
+                                                                me
+                                                                better</a>
+
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <% } %>
-                                                <% }) %>
 
+                                                <div class="modal fade" data-backdrop="false"
+                                                    id="<%= menu.menu.split(' ').join('_') %>" tabindex="0"
+                                                    role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="ModalLabel">
+                                                                    <%= menu.menu %>
+                                                                </h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true"
+                                                                        style="color: white;">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>
+                                                                    <%= menu.description %>
+                                                                </p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <p>Rp.<%= menu.price %>,-</p>
+                                                                <!--<button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <% } %>
+                                                    <% }) %>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="menu-content-box" id="box-food-2">
-                            <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
-                                <h1 data-aos="fade-in" data-aos-duration="1250">Toast</h1>
-                                <br>
-                                <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
-                                    <% menus.forEach((menu)=> { %>
-                                        <% if (menu.category === 'Toast' ) {%>
-                                            <div class="col-lg-3 col-md-6 mb-4">
-                                                <div class="card">
-                                                    <img class="card-img-top" src="<%= menu.img %>"
-                                                        alt="<%= menu.menu %>">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">
-                                                            <%= menu.menu %>
-                                                        </h4>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p style="color: white;">
-                                                            <% menu.price %>
-                                                        </p>
-                                                        <a href="#<%= menu.menu.split(' & ').join('_').split(' ').join('_') %>"
-                                                            class="btn btn-primary" data-toggle="modal"
-                                                            data-target="#<%= menu.menu.split(' & ').join('_').split(' ').join('_') %>">Know me
-                                                            better</a>
+                            <div class="parallax menu-container">
+                                <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <h1 data-aos="fade-in" data-aos-duration="1250">Non-Coffee</h1>
+                                    <br>
+                                    <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
 
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="modal fade" data-backdrop="false"
-                                                id="<%= menu.menu.split(' & ').join('_').split(' ').join('_') %>" tabindex="0" role="dialog"
-                                                aria-labelledby="ModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content" style="background-color: black;">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="ModalLabel">
+                                        <% menus.forEach((menu)=> { %>
+                                            <% if (menu.category==='Non-Coffee' ) {%>
+                                                <div class="col-lg-3 col-md-6 mb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="<%= menu.img %>"
+                                                            alt="<%= menu.menu %>">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title">
                                                                 <%= menu.menu %>
-                                                            </h5>
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Close">
-                                                                <span aria-hidden="true"
-                                                                    style="color: white;">&times;</span>
-                                                            </button>
+                                                            </h4>
                                                         </div>
-                                                        <div class="modal-body">
-                                                            <p>
-                                                                <%= menu.description %>
+                                                        <div class="card-footer">
+                                                            <p style="color: white;">
+                                                                <% menu.price %>
                                                             </p>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <p>Rp.<%= menu.price %>,-</p>
-                                                            <!--<button type="button" class="btn btn-secondary"
-                                                                data-dismiss="modal">Close</button>-->
+                                                            <a href="#<%= menu.menu.split(' ').join('_') %>"
+                                                                class="btn btn-primary" data-toggle="modal"
+                                                                data-target="#<%= menu.menu.split(' ').join('_') %>">Know
+                                                                me
+                                                                better</a>
+
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <% } %>
-                                                <% }) %>
+
+                                                <div class="modal fade" data-backdrop="false"
+                                                    id="<%= menu.menu.split(' ').join('_') %>" tabindex="0"
+                                                    role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="ModalLabel">
+                                                                    <%= menu.menu %>
+                                                                </h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true"
+                                                                        style="color: white;">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>
+                                                                    <%= menu.description %>
+                                                                </p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <p>Rp.<%= menu.price %>,-</p>
+                                                                <!--<button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <% } %>
+                                                    <% }) %>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="parallax menu-container">
-                            <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
-                                <h1 data-aos="fade-in" data-aos-duration="1250">Cookies</h1>
-                                <br>
-                                <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
-                                    <% menus.forEach((menu)=> { %>
-                                        <% if (menu.category === 'Cookies' ) {%>
-                                            <div class="col-lg-3 col-md-6 mb-4">
-                                                <div class="card">
-                                                    <img class="card-img-top" src="<%= menu.img %>"
-                                                        alt="<%= menu.menu %>">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">
-                                                            <%= menu.menu %>
-                                                        </h4>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p style="color: white;">
-                                                            <% menu.price %>
-                                                        </p>
-                                                        <a href="#<%= menu.menu.split(' ').join('_') %>"
-                                                            class="btn btn-primary" data-toggle="modal"
-                                                            data-target="#<%= menu.menu.split(' ').join('_') %>">Know me
-                                                            better</a>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="modal fade" data-backdrop="false"
-                                                id="<%= menu.menu.split(' ').join('_') %>" tabindex="0" role="dialog"
-                                                aria-labelledby="ModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content" style="background-color: black;">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="ModalLabel">
+                            <div class="menu-content-box" id="box-food-2">
+                                <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <h1 data-aos="fade-in" data-aos-duration="1250">Toast</h1>
+                                    <br>
+                                    <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
+                                        <% menus.forEach((menu)=> { %>
+                                            <% if (menu.category==='Toast' ) {%>
+                                                <div class="col-lg-3 col-md-6 mb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="<%= menu.img %>"
+                                                            alt="<%= menu.menu %>">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title">
                                                                 <%= menu.menu %>
-                                                            </h5>
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Close">
-                                                                <span aria-hidden="true"
-                                                                    style="color: white;">&times;</span>
-                                                            </button>
+                                                            </h4>
                                                         </div>
-                                                        <div class="modal-body">
-                                                            <p>
-                                                                <%= menu.description %>
+                                                        <div class="card-footer">
+                                                            <p style="color: white;">
+                                                                <% menu.price %>
                                                             </p>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <p>Rp.<%= menu.price %>,-</p>
-                                                            <!--<button type="button" class="btn btn-secondary"
-                                                                data-dismiss="modal">Close</button>-->
+                                                            <a href="#<%= menu.menu.split(' & ').join('_').split(' ').join('_') %>"
+                                                                class="btn btn-primary" data-toggle="modal"
+                                                                data-target="#<%= menu.menu.split(' & ').join('_').split(' ').join('_') %>">Know
+                                                                me
+                                                                better</a>
+
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <% } %>
-                                                <% }) %>
+
+                                                <div class="modal fade" data-backdrop="false"
+                                                    id="<%= menu.menu.split(' & ').join('_').split(' ').join('_') %>"
+                                                    tabindex="0" role="dialog" aria-labelledby="ModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="ModalLabel">
+                                                                    <%= menu.menu %>
+                                                                </h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true"
+                                                                        style="color: white;">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>
+                                                                    <%= menu.description %>
+                                                                </p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <p>Rp.<%= menu.price %>,-</p>
+                                                                <!--<button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <% } %>
+                                                    <% }) %>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="parallax menu-container">
+                                <div class="container menu-box" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <h1 data-aos="fade-in" data-aos-duration="1250">Cookies</h1>
+                                    <br>
+                                    <div class="row text-center" data-aos="fade-in" data-aos-duration="1250">
+                                        <% menus.forEach((menu)=> { %>
+                                            <% if (menu.category==='Cookies' ) {%>
+                                                <div class="col-lg-3 col-md-6 mb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="<%= menu.img %>"
+                                                            alt="<%= menu.menu %>">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title">
+                                                                <%= menu.menu %>
+                                                            </h4>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <p style="color: white;">
+                                                                <% menu.price %>
+                                                            </p>
+                                                            <a href="#<%= menu.menu.split(' ').join('_') %>"
+                                                                class="btn btn-primary" data-toggle="modal"
+                                                                data-target="#<%= menu.menu.split(' ').join('_') %>">Know
+                                                                me
+                                                                better</a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="modal fade" data-backdrop="false"
+                                                    id="<%= menu.menu.split(' ').join('_') %>" tabindex="0"
+                                                    role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="ModalLabel">
+                                                                    <%= menu.menu %>
+                                                                </h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true"
+                                                                        style="color: white;">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>
+                                                                    <%= menu.description %>
+                                                                </p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <p>Rp.<%= menu.price %>,-</p>
+                                                                <!--<button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <% } %>
+                                                    <% }) %>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <%- contentFor('bodyScript') %>
+                        <%- contentFor('bodyScript') %>
 
-                        <script>
-                            AOS.init();
-                        </script>
+                            <script>
+                                AOS.init();
+                            </script>

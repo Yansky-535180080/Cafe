@@ -37,6 +37,16 @@ button {
   margin-right: auto;
 }
 
+.button-account {
+  font: inherit;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  background-color: white;
+  margin-left: 40%;
+  margin-right: auto;
+}
+
 button:focus {
   outline: 0;
 }
@@ -227,6 +237,22 @@ label {
 .modal {
   position: relative;
 }
+
+div[class="modal-content"] {
+  background-color: rgba(0, 0, 0, 0.80);
+}
+
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+/*
+a[class="dropdown-item"]:hover {
+  background-color: gray !important;
+}
+
+a[class="dropdown-item"] {
+  color: white;
+}*/
 
 .menu-content-box {
   background-color: black;
