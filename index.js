@@ -12,18 +12,18 @@ const app = express();
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
 
+// use layouts
+app.use(layouts);
+app.set('layout', 'layouts/main.ejs');
+
 // Use body-parser to parse request body
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 // Static files
 app.use(express.static('public'));
 
 // Config passportjs
 require("./config/passport")(passport);
-
-// Passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
 
 // Config db
 const db = require('./config/database');
@@ -32,9 +32,13 @@ const db = require('./config/database');
 app.use(session({
     secret: 'some_secret_key', 
     cookie: {}, 
-    resave: true,
-    saveUninitialized: true
+    resave: false,
+    saveUninitialized: false
  }));
+
+ // Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 //connect flash
 app.use(flash());
@@ -46,10 +50,6 @@ app.use((req, res, next) => {
   res.locals.error = req.flash("error");
   next();
 });
-
-// use layouts
-app.use(layouts);
-app.set('layout', 'layouts/main.ejs');
 
 // routes
 const index = require('./routes/index');

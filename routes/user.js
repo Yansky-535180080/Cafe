@@ -9,15 +9,15 @@ const passport = require('passport');
 const Member = require('../models/member');
 const { deserializeUser } = require('passport');
 
-router.get('/login', async (req, res) => {
-    res.render('pages/login', {user: req.user});
+router.get('/login', (req, res) => {
+    res.render('pages/login');
 });
 
-router.get('/register', async (req, res) => {
-    res.render('pages/register', {user: req.user});
+router.get('/register', (req, res) => {
+    res.render('pages/register');
 })
 
-router.post('/login', async (req, res, next) => {
+router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
         successRedirect: '/',
         failureRedirect: '/user/login',
@@ -25,11 +25,11 @@ router.post('/login', async (req, res, next) => {
     })(req, res, next);
 });
 
-router.post('/register', async (req, res, next) => {
-    name = req.body.name;
-    email = req.body.email;
-    password = req.body.password;
-    retype = req.body.retype;
+router.post('/register', (req, res) => {
+    const name = req.body.name;
+    const email = req.body.email;
+    const password = req.body.password;
+    const retype = req.body.retype;
 
     let errors = [];
 
@@ -94,6 +94,13 @@ router.post('/register', async (req, res, next) => {
             }
         });
     }
+});
+
+// Logout handling
+router.get('/logout', (req, res) => {
+    req.logout();
+    req.flash('success_msg', 'You are logged out.');
+    res.redirect('/user/login');
 });
 
 module.exports = router;

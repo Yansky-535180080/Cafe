@@ -210,7 +210,7 @@ label {
 }
 
 .card {
-  height: 290px;
+  height: 350px;
   background-color: black;
 }
 
@@ -222,6 +222,10 @@ label {
   opacity: 0.95;
   transform: scale(1.025);
   transition-duration: 1s;
+}
+
+.modal {
+  position: relative;
 }
 
 .menu-content-box {
